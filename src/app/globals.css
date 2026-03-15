@@ -1,0 +1,381 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ========================================
+   URALENERGO — BRUTALIST SIGNAL DESIGN SYSTEM
+   ======================================== */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+  --font-serif: var(--font-playfair);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* Brutalist Signal Palette — Adapted for URALENERGO */
+  --radius: 2rem;
+  
+  /* Primary: Deep Anthracite */
+  --primary: #121212;
+  --primary-foreground: #F5F3EE;
+  
+  /* Accent: Energetic Orange (Copper/Safety) */
+  --accent: #FF6B00;
+  --accent-foreground: #121212;
+  
+  /* Background: Off-white Paper */
+  --background: #F5F3EE;
+  --foreground: #111111;
+  
+  /* Surface colors */
+  --card: #E8E4DD;
+  --card-foreground: #111111;
+  --popover: #E8E4DD;
+  --popover-foreground: #111111;
+  
+  /* Secondary: Paper */
+  --secondary: #E8E4DD;
+  --secondary-foreground: #111111;
+  
+  /* Muted */
+  --muted: #D9D5CE;
+  --muted-foreground: #6B6B6B;
+  
+  /* UI Elements */
+  --border: #C9C5BE;
+  --input: #C9C5BE;
+  --ring: #FF6B00;
+  
+  /* Destructive */
+  --destructive: #E63B2E;
+  
+  /* Sidebar */
+  --sidebar: #E8E4DD;
+  --sidebar-foreground: #111111;
+  --sidebar-primary: #121212;
+  --sidebar-primary-foreground: #F5F3EE;
+  --sidebar-accent: #FF6B00;
+  --sidebar-accent-foreground: #121212;
+  --sidebar-border: #C9C5BE;
+  --sidebar-ring: #FF6B00;
+  
+  /* Charts */
+  --chart-1: #FF6B00;
+  --chart-2: #121212;
+  --chart-3: #E8E4DD;
+  --chart-4: #6B6B6B;
+  --chart-5: #C9C5BE;
+}
+
+.dark {
+  --background: #121212;
+  --foreground: #F5F3EE;
+  --card: #1A1A1A;
+  --card-foreground: #F5F3EE;
+  --popover: #1A1A1A;
+  --popover-foreground: #F5F3EE;
+  --primary: #F5F3EE;
+  --primary-foreground: #121212;
+  --secondary: #2A2A2A;
+  --secondary-foreground: #F5F3EE;
+  --muted: #2A2A2A;
+  --muted-foreground: #A0A0A0;
+  --accent: #FF6B00;
+  --accent-foreground: #121212;
+  --destructive: #E63B2E;
+  --border: #2A2A2A;
+  --input: #2A2A2A;
+  --ring: #FF6B00;
+  --chart-1: #FF6B00;
+  --chart-2: #F5F3EE;
+  --chart-3: #2A2A2A;
+  --chart-4: #A0A0A0;
+  --chart-5: #3A3A3A;
+  --sidebar: #1A1A1A;
+  --sidebar-foreground: #F5F3EE;
+  --sidebar-primary: #F5F3EE;
+  --sidebar-primary-foreground: #121212;
+  --sidebar-accent: #FF6B00;
+  --sidebar-accent-foreground: #121212;
+  --sidebar-border: #2A2A2A;
+  --sidebar-ring: #FF6B00;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ========================================
+   NOISE OVERLAY — Global Visual Texture
+   ======================================== */
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+}
+
+.noise-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 150px 150px;
+}
+
+/* ========================================
+   TYPOGRAPHY — Brutalist Signal
+   ======================================== */
+
+.font-heading {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.font-drama {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.font-mono-data {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ========================================
+   BUTTONS — Magnetic Feel
+   ======================================== */
+
+.btn-magnetic {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn-magnetic:hover {
+  transform: scale(1.03);
+}
+
+.btn-magnetic:active {
+  transform: scale(0.98);
+}
+
+.btn-magnetic::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-magnetic:hover::before {
+  opacity: 1;
+}
+
+/* Sliding background effect */
+.btn-slide-bg {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-slide-bg span.bg-slide {
+  position: absolute;
+  inset: 0;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: -1;
+}
+
+.btn-slide-bg:hover span.bg-slide {
+  transform: translateY(0);
+}
+
+/* ========================================
+   LINK HOVER — Lift Effect
+   ======================================== */
+
+.link-lift {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.link-lift:hover {
+  transform: translateY(-1px);
+}
+
+/* ========================================
+   CARDS — Rounded System
+   ======================================== */
+
+.card-rounded {
+  border-radius: 2rem;
+}
+
+.card-rounded-lg {
+  border-radius: 3rem;
+}
+
+/* ========================================
+   GRADIENTS
+   ======================================== */
+
+.gradient-hero {
+  background: linear-gradient(
+    to top,
+    rgba(18, 18, 18, 0.95) 0%,
+    rgba(18, 18, 18, 0.7) 40%,
+    rgba(18, 18, 18, 0.3) 70%,
+    transparent 100%
+  );
+}
+
+.gradient-accent-glow {
+  box-shadow: 0 0 60px rgba(255, 107, 0, 0.3),
+              0 0 120px rgba(255, 107, 0, 0.1);
+}
+
+/* ========================================
+   ANIMATIONS — GSAP Utilities
+   ======================================== */
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+@keyframes blink-cursor {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.animate-blink-cursor {
+  animation: blink-cursor 1s step-end infinite;
+}
+
+.animate-scan-line {
+  animation: scan-line 3s linear infinite;
+}
+
+/* ========================================
+   SCROLLBAR — Custom Styling
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+/* Selection */
+::selection {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Smooth scroll container */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(18, 18, 18, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
