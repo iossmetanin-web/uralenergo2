@@ -296,7 +296,7 @@ function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=1920&q=80"
+          src="/transformers.jpg"
           alt="Трансформаторы на складе производства"
           className="w-full h-full object-cover"
         />
