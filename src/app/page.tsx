@@ -219,15 +219,6 @@ function Navbar() {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <a
-          href="#contact"
-          className="hidden md:flex items-center gap-2 px-5 py-2.5 bg-[#FF6B00] text-[#121212] font-semibold text-sm rounded-full btn-magnetic"
-        >
-          {BRAND.cta}
-          <ArrowRight className="w-4 h-4" />
-        </a>
-
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -259,7 +250,7 @@ function Navbar() {
               onClick={() => setIsMobileMenuOpen(false)}
               className="flex items-center justify-center gap-2 px-4 py-3 bg-[#FF6B00] text-[#121212] font-semibold rounded-2xl mt-2"
             >
-              {BRAND.cta}
+              Связаться
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
