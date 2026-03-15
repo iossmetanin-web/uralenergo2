@@ -296,8 +296,8 @@ function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=80"
-          alt="Электрическая подстанция"
+          src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=1920&q=80"
+          alt="Трансформаторы на производстве"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 gradient-hero" />
@@ -672,7 +672,7 @@ function Philosophy() {
       {/* Background Texture */}
       <div className="absolute inset-0 opacity-10">
         <img
-          src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920&q=80"
           alt=""
           className="w-full h-full object-cover"
         />
