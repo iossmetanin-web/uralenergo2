@@ -296,8 +296,8 @@ function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=1920&q=80"
-          alt="Трансформаторы на производстве"
+          src="https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=1920&q=80"
+          alt="Трансформаторы на складе производства"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 gradient-hero" />
