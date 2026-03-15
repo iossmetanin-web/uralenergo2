@@ -1355,13 +1355,7 @@ function Footer() {
               <Zap className="w-6 h-6 text-[#FF6B00]" />
               {BRAND.name}
             </a>
-            <p className="text-[#A0A0A0] mb-6">{BRAND.tagline}</p>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-[#22C55E] rounded-full animate-pulse-dot" />
-              <span className="text-xs font-mono-data text-[#A0A0A0]">
-                Система активна
-              </span>
-            </div>
+            <p className="text-[#A0A0A0]">{BRAND.tagline}</p>
           </div>
 
           {/* Navigation */}
@@ -1426,7 +1420,7 @@ function Footer() {
         <div className="border-t border-[#2A2A2A] pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-[#6B6B6B] text-sm">
-              © 2024 УРАЛЭНЕРГО. Все права защищены.
+              © 2026 УРАЛЭНЕРГО. Все права защищены.
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-[#6B6B6B] hover:text-[#FF6B00] text-sm transition-colors">
